@@ -208,6 +208,39 @@
 
 
 
+
+
+
+
+
+  /* 新闻流入口卡片样式 */
+  .news-entry-card {
+    background: linear-gradient(135deg, #fff 0%, #f1f8e9 100%);
+    border: 2px solid #c8e6c9; border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+  }
+  .news-entry-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46,125,50,0.12);
+  }
+  .news-entry-body {
+    display: flex; align-items: center; gap: 20px; padding: 8px 0;
+  }
+  .news-entry-icon { font-size: 40px; flex-shrink: 0; }
+  .news-entry-text { flex: 1; }
+  .news-entry-text h2 { font-size: 20px; color: #2e7d32; margin-bottom: 4px; }
+  .news-entry-text p { font-size: 14px; color: #666; }
+  .news-entry-btn {
+    flex-shrink: 0; display: inline-block;
+    background: #2e7d32; color: #fff !important; text-decoration: none;
+    padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    transition: background 0.2s; white-space: nowrap;
+  }
+  .news-entry-btn:hover { background: #1b5e20; }
+  @media (max-width: 600px) {
+    .news-entry-body { flex-direction: column; text-align: center; gap: 12px; }
+  }
+
   /* 涨跌前6样式 */
   .board-tabs { display: flex; gap: 4px; margin-bottom: 0; border-bottom: 2px solid #fce8f0; flex-wrap: wrap; }
   .board-tab {
@@ -267,37 +300,6 @@
     background: #f5f5f5; border-radius: 8px; margin-top: 4px;
   }
   /* 涨跌前6样式结束 */
-
-
-
-
-  /* 新闻流入口卡片样式 */
-  .news-entry-card {
-    background: linear-gradient(135deg, #fff 0%, #f1f8e9 100%);
-    border: 2px solid #c8e6c9; border-radius: 12px;
-    transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
-  }
-  .news-entry-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(46,125,50,0.12);
-  }
-  .news-entry-body {
-    display: flex; align-items: center; gap: 20px; padding: 8px 0;
-  }
-  .news-entry-icon { font-size: 40px; flex-shrink: 0; }
-  .news-entry-text { flex: 1; }
-  .news-entry-text h2 { font-size: 20px; color: #2e7d32; margin-bottom: 4px; }
-  .news-entry-text p { font-size: 14px; color: #666; }
-  .news-entry-btn {
-    flex-shrink: 0; display: inline-block;
-    background: #2e7d32; color: #fff !important; text-decoration: none;
-    padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600;
-    transition: background 0.2s; white-space: nowrap;
-  }
-  .news-entry-btn:hover { background: #1b5e20; }
-  @media (max-width: 600px) {
-    .news-entry-body { flex-direction: column; text-align: center; gap: 12px; }
-  }
 
 
   /* ESG新闻简报样式 */
