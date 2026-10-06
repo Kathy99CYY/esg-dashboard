@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A股ESG综合看板 - 2026-09-17 15:37:41</title>
+<title>A股ESG综合看板 - 2026-10-06 13:55:55</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -209,6 +209,45 @@
 
 
 
+
+
+
+
+
+  /* 新闻流入口卡片样式 */
+  .news-entry-card {
+    background: linear-gradient(135deg, #fff 0%, #f1f8e9 100%);
+    border: 2px solid #c8e6c9; border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+  }
+  .news-entry-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46,125,50,0.12);
+  }
+  .news-entry-body {
+    display: flex; align-items: center; gap: 20px; padding: 8px 0;
+  }
+  .news-entry-icon { font-size: 40px; flex-shrink: 0; }
+  .news-entry-text { flex: 1; }
+  .news-entry-text h2 { font-size: 20px; color: #2e7d32; margin-bottom: 4px; }
+  .news-entry-text p { font-size: 14px; color: #666; }
+  .news-entry-btn {
+    flex-shrink: 0; display: inline-block;
+    background: #2e7d32; color: #fff !important; text-decoration: none;
+    padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    transition: background 0.2s; white-space: nowrap;
+  }
+  .news-entry-btn:hover { background: #1b5e20; }
+  @media (max-width: 600px) {
+    .news-entry-body { flex-direction: column; text-align: center; gap: 12px; }
+  }
+
+
+
+
+
+
+
   /* 涨跌前6样式 */
   .board-tabs { display: flex; gap: 4px; margin-bottom: 0; border-bottom: 2px solid #fce8f0; flex-wrap: wrap; }
   .board-tab {
@@ -268,40 +307,6 @@
     background: #f5f5f5; border-radius: 8px; margin-top: 4px;
   }
   /* 涨跌前6样式结束 */
-
-
-
-
-  /* 新闻流入口卡片样式 */
-  .news-entry-card {
-    background: linear-gradient(135deg, #fff 0%, #f1f8e9 100%);
-    border: 2px solid #c8e6c9; border-radius: 12px;
-    transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
-  }
-  .news-entry-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(46,125,50,0.12);
-  }
-  .news-entry-body {
-    display: flex; align-items: center; gap: 20px; padding: 8px 0;
-  }
-  .news-entry-icon { font-size: 40px; flex-shrink: 0; }
-  .news-entry-text { flex: 1; }
-  .news-entry-text h2 { font-size: 20px; color: #2e7d32; margin-bottom: 4px; }
-  .news-entry-text p { font-size: 14px; color: #666; }
-  .news-entry-btn {
-    flex-shrink: 0; display: inline-block;
-    background: #2e7d32; color: #fff !important; text-decoration: none;
-    padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600;
-    transition: background 0.2s; white-space: nowrap;
-  }
-  .news-entry-btn:hover { background: #1b5e20; }
-  @media (max-width: 600px) {
-    .news-entry-body { flex-direction: column; text-align: center; gap: 12px; }
-  }
-
-
-
 
 
   /* ESG新闻简报样式 */
@@ -444,7 +449,7 @@
   <header>
     <h1>A股ESG综合看板</h1>
     <div class="meta">
-      <span>更新时间：2026-09-17 15:37:41</span>
+      <span>更新时间：2026-10-06 13:55:55</span>
       <span>数据源：akshare（东方财富） + 多渠道ESG新闻</span>
       <span>定时：交易日 9:30 / 14:00</span>
     </div>
@@ -463,7 +468,7 @@
   <div class="card" id="top-stocks">
     <h2>🏆 涨跌前6 · 四大板块 · ESG标注</h2>
     <p style="color:#666;font-size:13px;margin-bottom:16px;">
-      主板 / 创业板 / 科创板 / 北交所 各取涨幅前6+跌幅前6，标注当日ESG新闻提及情况 | 数据时间：<span style="color:#c62828;font-weight:700">行情获取失败（接口无响应，以下为 2026-07-26 12:47 的缓存）</span>
+      主板 / 创业板 / 科创板 / 北交所 各取涨幅前6+跌幅前6，标注当日ESG新闻提及情况 | 数据时间：2026-10-06 13:56
     </p>
     <div class="board-tabs">
       <button class="board-tab active" onclick="switchBoard(this,&#39;主板&#39;)">主板</button>
@@ -478,12 +483,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>美盈森<span class="stock-code">002303</span></td><td class="up">10.12%</td><td class="industry-name">包装印刷</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>新亚制程<span class="stock-code">002388</span></td><td class="up">10.10%</td><td class="industry-name">其他电子Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>太阳电缆<span class="stock-code">002300</span></td><td class="up">10.08%</td><td class="industry-name">电网设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>盈方微<span class="stock-code">000670</span></td><td class="up">10.07%</td><td class="industry-name">其他电子Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>国新能源<span class="stock-code">600617</span></td><td class="up">10.06%</td><td class="industry-name">燃气Ⅱ</td><td><span class="esg-yes" title="潘基文：中国新能源汽车产业推动全球向绿色出行转型">有(1)</span></td></tr>
-            <tr><td>中电鑫龙<span class="stock-code">002298</span></td><td class="up">10.05%</td><td class="industry-name">电网设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>N力勤<span class="stock-code">001246</span></td><td class="up">206.59%</td><td class="industry-name">能源金属</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>江南化工<span class="stock-code">002226</span></td><td class="up">10.10%</td><td class="industry-name">化学制品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>惠天热电<span class="stock-code">000692</span></td><td class="up">10.07%</td><td class="industry-name">电力</td><td><span class="esg-yes" title="【000692 惠天热电】2025可持续发展（ESG）报告">有(1)</span></td></tr>
+            <tr><td>古越龙山<span class="stock-code">600059</span></td><td class="up">10.04%</td><td class="industry-name">非白酒</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>阳光乳业<span class="stock-code">001318</span></td><td class="up">10.04%</td><td class="industry-name">饮料乳品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>宁波东力<span class="stock-code">002164</span></td><td class="up">10.04%</td><td class="industry-name">通用设备</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -492,12 +497,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>京能电力<span class="stock-code">600578</span></td><td class="down">-10.06%</td><td class="industry-name">电力</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>证通电子<span class="stock-code">002197</span></td><td class="down">-10.04%</td><td class="industry-name">计算机设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>深南电A<span class="stock-code">000037</span></td><td class="down">-10.03%</td><td class="industry-name">电力</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>华电能源<span class="stock-code">600726</span></td><td class="down">-10.03%</td><td class="industry-name">电力</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>闰土股份<span class="stock-code">002440</span></td><td class="down">-10.02%</td><td class="industry-name">化学制品</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>粤电力Ａ<span class="stock-code">000539</span></td><td class="down">-10.02%</td><td class="industry-name">电力</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>*ST岭南<span class="stock-code">002717</span></td><td class="down">-10.14%</td><td class="industry-name">基础建设</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>联泰环保<span class="stock-code">603797</span></td><td class="down">-10.07%</td><td class="industry-name">环境治理</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>华升股份<span class="stock-code">600156</span></td><td class="down">-10.04%</td><td class="industry-name">纺织制造</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>新中港<span class="stock-code">605162</span></td><td class="down">-10.03%</td><td class="industry-name">电力</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>泰慕士<span class="stock-code">001234</span></td><td class="down">-10.01%</td><td class="industry-name">服装家纺</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>华瓷股份<span class="stock-code">001216</span></td><td class="down">-10.00%</td><td class="industry-name">家居用品</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -505,13 +510,17 @@
       <div class="industry-stats">
         <span class="board-industry-label">主板 行业分布：<span class="ind-legend"><em class="gain-num">涨</em> <em class="loss-num">跌</em></span></span>
         <div class="industry-tags">
-            <span class="industry-tag" title="跌: 京能电力(-10.1%), 深南电A(-10.0%), 华电能源(-10.0%), 粤电力Ａ(-10.0%)">电力 <em class="gain-num">0</em> <em class="loss-num">4</em></span>
-            <span class="industry-tag" title="涨: 新亚制程(+10.1%), 盈方微(+10.1%)">其他电子Ⅱ <em class="gain-num">2</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 太阳电缆(+10.1%), 中电鑫龙(+10.1%)">电网设备 <em class="gain-num">2</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 国新能源(+10.1%)">燃气Ⅱ <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="跌: 闰土股份(-10.0%)">化学制品 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="跌: 证通电子(-10.0%)">计算机设备 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: 美盈森(+10.1%)">包装印刷 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 惠天热电(+10.1%) | 跌: 新中港(-10.0%)">电力 <em class="gain-num">1</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: *ST岭南(-10.1%)">基础建设 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: 华瓷股份(-10.0%)">家居用品 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: N力勤(+206.6%)">能源金属 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 宁波东力(+10.0%)">通用设备 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 阳光乳业(+10.0%)">饮料乳品 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 华升股份(-10.0%)">纺织制造 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: 泰慕士(-10.0%)">服装家纺 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 古越龙山(+10.0%)">非白酒 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 联泰环保(-10.1%)">环境治理 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 江南化工(+10.1%)">化学制品 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
         </div>
         <div class="esg-legend"><span class="esg-yes">有</span> = ESG新闻有提及 &nbsp; <span class="esg-no">—</span> = 无提及 &nbsp;|&nbsp; 主板共12只，1只有ESG关注</div>
       </div>
@@ -523,12 +532,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>中光防雷<span class="stock-code">300414</span></td><td class="up">20.02%</td><td class="industry-name">通信设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>光力科技<span class="stock-code">300480</span></td><td class="up">20.02%</td><td class="industry-name">专用设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>托伦斯<span class="stock-code">301583</span></td><td class="up">20.00%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>五洲医疗<span class="stock-code">301234</span></td><td class="up">20.00%</td><td class="industry-name">医疗器械</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>日科化学<span class="stock-code">300214</span></td><td class="up">15.59%</td><td class="industry-name">化学制品</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>浙江华远<span class="stock-code">301535</span></td><td class="up">14.36%</td><td class="industry-name">汽车零部件</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>善水科技<span class="stock-code">301190</span></td><td class="up">20.01%</td><td class="industry-name">化学原料</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>松原安全<span class="stock-code">300893</span></td><td class="up">19.98%</td><td class="industry-name">汽车零部件</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>华是科技<span class="stock-code">301218</span></td><td class="up">15.84%</td><td class="industry-name">IT服务Ⅱ</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>百普赛斯<span class="stock-code">301080</span></td><td class="up">14.69%</td><td class="industry-name">生物制品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>中红医疗<span class="stock-code">300981</span></td><td class="up">13.41%</td><td class="industry-name">医疗器械</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>广康生化<span class="stock-code">300804</span></td><td class="up">12.48%</td><td class="industry-name">农化制品</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -537,12 +546,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>华力创通<span class="stock-code">300045</span></td><td class="down">-20.03%</td><td class="industry-name">军工电子Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>鑫宏业<span class="stock-code">301310</span></td><td class="down">-16.61%</td><td class="industry-name">汽车零部件</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>米奥会展<span class="stock-code">300795</span></td><td class="down">-13.79%</td><td class="industry-name">专业服务</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>陇神戎发<span class="stock-code">300534</span></td><td class="down">-13.00%</td><td class="industry-name">中药Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>格林精密<span class="stock-code">300968</span></td><td class="down">-12.43%</td><td class="industry-name">消费电子</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>银之杰<span class="stock-code">300085</span></td><td class="down">-11.32%</td><td class="industry-name">软件开发</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>元道退<span class="stock-code">301139</span></td><td class="down">-72.51%</td><td class="industry-name">通信服务</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>*ST仕净<span class="stock-code">301030</span></td><td class="down">-15.90%</td><td class="industry-name">环保设备Ⅱ</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>中塑股份<span class="stock-code">301686</span></td><td class="down">-13.66%</td><td class="industry-name">塑料</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>汉嘉数智<span class="stock-code">300746</span></td><td class="down">-11.54%</td><td class="industry-name">工程咨询服务Ⅱ</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>凌玮科技<span class="stock-code">301373</span></td><td class="down">-9.92%</td><td class="industry-name">化学制品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>蜂助手<span class="stock-code">301382</span></td><td class="down">-9.11%</td><td class="industry-name">通信服务</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -550,17 +559,17 @@
       <div class="industry-stats">
         <span class="board-industry-label">创业板 行业分布：<span class="ind-legend"><em class="gain-num">涨</em> <em class="loss-num">跌</em></span></span>
         <div class="industry-tags">
-            <span class="industry-tag" title="涨: 浙江华远(+14.4%) | 跌: 鑫宏业(-16.6%)">汽车零部件 <em class="gain-num">1</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: 五洲医疗(+20.0%)">医疗器械 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 中光防雷(+20.0%)">通信设备 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 日科化学(+15.6%)">化学制品 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 托伦斯(+20.0%)">半导体 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="跌: 米奥会展(-13.8%)">专业服务 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="跌: 陇神戎发(-13.0%)">中药Ⅱ <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: 光力科技(+20.0%)">专用设备 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="跌: 格林精密(-12.4%)">消费电子 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="跌: 银之杰(-11.3%)">软件开发 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="跌: 华力创通(-20.0%)">军工电子Ⅱ <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: 元道退(-72.5%), 蜂助手(-9.1%)">通信服务 <em class="gain-num">0</em> <em class="loss-num">2</em></span>
+            <span class="industry-tag" title="涨: 广康生化(+12.5%)">农化制品 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: *ST仕净(-15.9%)">环保设备Ⅱ <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 百普赛斯(+14.7%)">生物制品 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 华是科技(+15.8%)">IT服务Ⅱ <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 中塑股份(-13.7%)">塑料 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: 汉嘉数智(-11.5%)">工程咨询服务Ⅱ <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 善水科技(+20.0%)">化学原料 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 中红医疗(+13.4%)">医疗器械 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 松原安全(+20.0%)">汽车零部件 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 凌玮科技(-9.9%)">化学制品 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
         </div>
         <div class="esg-legend"><span class="esg-yes">有</span> = ESG新闻有提及 &nbsp; <span class="esg-no">—</span> = 无提及 &nbsp;|&nbsp; 创业板共12只，0只有ESG关注</div>
       </div>
@@ -572,12 +581,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>超卓航科<span class="stock-code">688237</span></td><td class="up">20.00%</td><td class="industry-name">航空装备Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>*ST禾信<span class="stock-code">688622</span></td><td class="up">20.00%</td><td class="industry-name">通用设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>华强科技<span class="stock-code">688151</span></td><td class="up">14.81%</td><td class="industry-name">医疗器械</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>中船特气<span class="stock-code">688146</span></td><td class="up">14.27%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>翱捷科技-U<span class="stock-code">688220</span></td><td class="up">8.15%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>正帆科技<span class="stock-code">688596</span></td><td class="up">7.73%</td><td class="industry-name">专用设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>康希诺<span class="stock-code">688185</span></td><td class="up">20.00%</td><td class="industry-name">生物制品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>泰诺麦博-U<span class="stock-code">688806</span></td><td class="up">19.99%</td><td class="industry-name">生物制品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>南模生物<span class="stock-code">688265</span></td><td class="up">19.87%</td><td class="industry-name">医疗服务</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>近岸蛋白<span class="stock-code">688137</span></td><td class="up">13.47%</td><td class="industry-name">生物制品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>信诺维<span class="stock-code">688837</span></td><td class="up">13.28%</td><td class="industry-name">化学制药</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>洁特生物<span class="stock-code">688026</span></td><td class="up">12.51%</td><td class="industry-name">医疗器械</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -586,12 +595,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>必贝特-U<span class="stock-code">688759</span></td><td class="down">-14.24%</td><td class="industry-name">化学制药</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>通源环境<span class="stock-code">688679</span></td><td class="down">-12.96%</td><td class="industry-name">环境治理</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>热景生物<span class="stock-code">688068</span></td><td class="down">-11.73%</td><td class="industry-name">医疗器械</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>泛亚微透<span class="stock-code">688386</span></td><td class="down">-10.35%</td><td class="industry-name">塑料</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>有研硅<span class="stock-code">688432</span></td><td class="down">-9.87%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>铂力特<span class="stock-code">688333</span></td><td class="down">-9.34%</td><td class="industry-name">通用设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>*ST禾信<span class="stock-code">688622</span></td><td class="down">-12.06%</td><td class="industry-name">通用设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>芯原股份<span class="stock-code">688521</span></td><td class="down">-11.34%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>杰华特<span class="stock-code">688141</span></td><td class="down">-7.75%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>泰金新能<span class="stock-code">688813</span></td><td class="down">-7.15%</td><td class="industry-name">专用设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>海正生材<span class="stock-code">688203</span></td><td class="down">-7.11%</td><td class="industry-name">塑料</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>气派科技<span class="stock-code">688216</span></td><td class="down">-7.04%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -599,14 +608,14 @@
       <div class="industry-stats">
         <span class="board-industry-label">科创板 行业分布：<span class="ind-legend"><em class="gain-num">涨</em> <em class="loss-num">跌</em></span></span>
         <div class="industry-tags">
-            <span class="industry-tag" title="涨: 中船特气(+14.3%), 翱捷科技-U(+8.2%) | 跌: 有研硅(-9.9%)">半导体 <em class="gain-num">2</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: 华强科技(+14.8%) | 跌: 热景生物(-11.7%)">医疗器械 <em class="gain-num">1</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: *ST禾信(+20.0%) | 跌: 铂力特(-9.3%)">通用设备 <em class="gain-num">1</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="跌: 通源环境(-13.0%)">环境治理 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: 正帆科技(+7.7%)">专用设备 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="跌: 必贝特-U(-14.2%)">化学制药 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="跌: 泛亚微透(-10.3%)">塑料 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: 超卓航科(+20.0%)">航空装备Ⅱ <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 康希诺(+20.0%), 泰诺麦博-U(+20.0%), 近岸蛋白(+13.5%)">生物制品 <em class="gain-num">3</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 芯原股份(-11.3%), 杰华特(-7.8%), 气派科技(-7.0%)">半导体 <em class="gain-num">0</em> <em class="loss-num">3</em></span>
+            <span class="industry-tag" title="跌: 泰金新能(-7.2%)">专用设备 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 信诺维(+13.3%)">化学制药 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: *ST禾信(-12.1%)">通用设备 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: 海正生材(-7.1%)">塑料 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 洁特生物(+12.5%)">医疗器械 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 南模生物(+19.9%)">医疗服务 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
         </div>
         <div class="esg-legend"><span class="esg-yes">有</span> = ESG新闻有提及 &nbsp; <span class="esg-no">—</span> = 无提及 &nbsp;|&nbsp; 科创板共12只，0只有ESG关注</div>
       </div>
@@ -618,12 +627,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>N长鹰<span class="stock-code">920238</span></td><td class="up">196.61%</td><td class="industry-name">通用设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>华岭股份<span class="stock-code">920139</span></td><td class="up">12.65%</td><td class="industry-name">半导体</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>益坤电气<span class="stock-code">920222</span></td><td class="up">10.49%</td><td class="industry-name">电网设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>安徽凤凰<span class="stock-code">920000</span></td><td class="up">7.42%</td><td class="industry-name">汽车零部件</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>方大新材<span class="stock-code">920163</span></td><td class="up">6.91%</td><td class="industry-name">包装印刷</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>浩淼科技<span class="stock-code">920856</span></td><td class="up">5.88%</td><td class="industry-name">专用设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>三元基因<span class="stock-code">920344</span></td><td class="up">15.79%</td><td class="industry-name">生物制品</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>科拜尔<span class="stock-code">920066</span></td><td class="up">11.29%</td><td class="industry-name">塑料</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>锦波生物<span class="stock-code">920982</span></td><td class="up">10.28%</td><td class="industry-name">医疗美容</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>路桥信息<span class="stock-code">920748</span></td><td class="up">10.07%</td><td class="industry-name">IT服务Ⅱ</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>力佳科技<span class="stock-code">920237</span></td><td class="up">8.24%</td><td class="industry-name">电池</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>中草香料<span class="stock-code">920016</span></td><td class="up">5.56%</td><td class="industry-name">化学制品</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -632,12 +641,12 @@
         <table class="top6-table">
           <thead><tr><th>股票</th><th>涨跌幅</th><th>行业</th><th>ESG</th></tr></thead>
           <tbody>
-            <tr><td>云创退<span class="stock-code">920305</span></td><td class="down">-29.45%</td><td class="industry-name">IT服务Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>联迪信息<span class="stock-code">920790</span></td><td class="down">-19.84%</td><td class="industry-name">IT服务Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>新赣江<span class="stock-code">920367</span></td><td class="down">-12.87%</td><td class="industry-name">化学制药</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>优机股份<span class="stock-code">920943</span></td><td class="down">-12.25%</td><td class="industry-name">通用设备</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>立方控股<span class="stock-code">920130</span></td><td class="down">-12.24%</td><td class="industry-name">IT服务Ⅱ</td><td><span class="esg-no">—</span></td></tr>
-            <tr><td>灿能电力<span class="stock-code">920299</span></td><td class="down">-11.29%</td><td class="industry-name">电网设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>安达股份<span class="stock-code">920202</span></td><td class="down">-29.97%</td><td class="industry-name">汽车零部件</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>百瑞吉<span class="stock-code">920201</span></td><td class="down">-8.58%</td><td class="industry-name">医疗器械</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>天罡股份<span class="stock-code">920651</span></td><td class="down">-7.79%</td><td class="industry-name">通用设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>腾信精密<span class="stock-code">920298</span></td><td class="down">-7.40%</td><td class="industry-name">专用设备</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>三维装备<span class="stock-code">920834</span></td><td class="down">-7.13%</td><td class="industry-name">橡胶</td><td><span class="esg-no">—</span></td></tr>
+            <tr><td>世纪数码<span class="stock-code">920229</span></td><td class="down">-6.17%</td><td class="industry-name">专用设备</td><td><span class="esg-no">—</span></td></tr>
           </tbody>
         </table>
         </div>
@@ -645,14 +654,17 @@
       <div class="industry-stats">
         <span class="board-industry-label">北交所 行业分布：<span class="ind-legend"><em class="gain-num">涨</em> <em class="loss-num">跌</em></span></span>
         <div class="industry-tags">
-            <span class="industry-tag" title="跌: 云创退(-29.4%), 联迪信息(-19.8%), 立方控股(-12.2%)">IT服务Ⅱ <em class="gain-num">0</em> <em class="loss-num">3</em></span>
-            <span class="industry-tag" title="涨: 益坤电气(+10.5%) | 跌: 灿能电力(-11.3%)">电网设备 <em class="gain-num">1</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: N长鹰(+196.6%) | 跌: 优机股份(-12.2%)">通用设备 <em class="gain-num">1</em> <em class="loss-num">1</em></span>
-            <span class="industry-tag" title="涨: 安徽凤凰(+7.4%)">汽车零部件 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 华岭股份(+12.7%)">半导体 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 方大新材(+6.9%)">包装印刷 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="涨: 浩淼科技(+5.9%)">专用设备 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
-            <span class="industry-tag" title="跌: 新赣江(-12.9%)">化学制药 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: 腾信精密(-7.4%), 世纪数码(-6.2%)">专用设备 <em class="gain-num">0</em> <em class="loss-num">2</em></span>
+            <span class="industry-tag" title="涨: 三元基因(+15.8%)">生物制品 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 路桥信息(+10.1%)">IT服务Ⅱ <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="涨: 力佳科技(+8.2%)">电池 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 天罡股份(-7.8%)">通用设备 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 科拜尔(+11.3%)">塑料 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 三维装备(-7.1%)">橡胶 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="跌: 百瑞吉(-8.6%)">医疗器械 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 锦波生物(+10.3%)">医疗美容 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
+            <span class="industry-tag" title="跌: 安达股份(-30.0%)">汽车零部件 <em class="gain-num">0</em> <em class="loss-num">1</em></span>
+            <span class="industry-tag" title="涨: 中草香料(+5.6%)">化学制品 <em class="gain-num">1</em> <em class="loss-num">0</em></span>
         </div>
         <div class="esg-legend"><span class="esg-yes">有</span> = ESG新闻有提及 &nbsp; <span class="esg-no">—</span> = 无提及 &nbsp;|&nbsp; 北交所共12只，0只有ESG关注</div>
       </div>
@@ -687,6 +699,10 @@
 
 
 
+
+
+
+  
   
   
   
@@ -711,13 +727,13 @@
           <span class="briefing-icon">📊</span>
           A股ESG新闻精华简报
         </div>
-        <div class="briefing-date">更新时间：2026-09-17 15:37 | 数据截止：2026-07-26 09:07:58</div>
+        <div class="briefing-date">更新时间：2026-10-06 13:55 | 数据截止：2026-07-26 09:07:58</div>
       </div>
       
       <!-- 核心数据概览 -->
       <div class="briefing-stats">
         <div class="stat-item">
-          <span class="stat-num" style="color:#e68fa8;">285</span>
+          <span class="stat-num" style="color:#e68fa8;">323</span>
           <span class="stat-label">新闻总数</span>
         </div>
         <div class="stat-item">
@@ -729,11 +745,11 @@
           <span class="stat-label">主题分类</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num" style="color:#2e7d32;">93</span>
+          <span class="stat-num" style="color:#2e7d32;">99</span>
           <span class="stat-label">提及公司</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num" style="color:#e65100;">176</span>
+          <span class="stat-num" style="color:#e65100;">192</span>
           <span class="stat-label">公司提及次数</span>
         </div>
       </div>
@@ -741,9 +757,9 @@
       <!-- 来源分布 -->
       <div class="briefing-sources">
         <span class="source-label">来源分布：</span>
-        <span class="briefing-source-tag">每经ESG <em>181</em></span>
-        <span class="briefing-source-tag">巨潮ESG公告 <em>46</em></span>
-        <span class="briefing-source-tag">巨潮可持续报告 <em>30</em></span>
+        <span class="briefing-source-tag">每经ESG <em>211</em></span>
+        <span class="briefing-source-tag">巨潮ESG公告 <em>52</em></span>
+        <span class="briefing-source-tag">巨潮可持续报告 <em>32</em></span>
         <span class="briefing-source-tag">新浪财经ESG <em>28</em></span>
       </div>
       
@@ -755,13 +771,13 @@
           <span class="investor-report-badge">856字</span>
         </div>
         <div class="investor-report-body">
-          <p>本期共监测到285条A股ESG相关新闻，信息来源覆盖每经ESG（181条）、巨潮ESG公告（46条）、巨潮可持续报告（30条）、新浪财经ESG（28条）四大渠道，经主题聚类分析形成10大方向，涉及93家上市公司、176次公司提及。整体来看，ESG信息披露节奏持续加快，上市公司治理层面动作频繁，碳市场政策与可持续金融产品成为本期最受关注的两大主线。</p>
-          <p>治理与披露层面，ESG治理与委员会相关新闻达35条，居各主题前列。天能重工（300569）【300569 天能重工】关于拟补选董事、战略发展与ESG委、新大陆（000997）【000997 新大陆】新大陆2025年度环境、社会和公司治、中国巨石（600176）【600176 中国巨石】中国巨石董事会战略与可持续发展（E等公司相继发布ESG委员会公告或制度文件，表明A股上市公司正从“被动披露”向“主动治理”转变，ESG委员会职能持续向投资决策渗透。同期，ESG报告与披露类新闻33条，绿地控股、新希望（000876）、怡合达（301029）等公司相继发布2025年度可持续发展报告，信披质量与国际化程度均有提升。</p>
+          <p>本期共监测到323条A股ESG相关新闻，信息来源覆盖每经ESG（211条）、巨潮ESG公告（52条）、巨潮可持续报告（32条）、新浪财经ESG（28条）四大渠道，经主题聚类分析形成10大方向，涉及99家上市公司、192次公司提及。整体来看，ESG信息披露节奏持续加快，上市公司治理层面动作频繁，碳市场政策与可持续金融产品成为本期最受关注的两大主线。</p>
+          <p>治理与披露层面，ESG治理与委员会相关新闻达40条，居各主题前列。天能重工（300569）【300569 天能重工】关于拟补选董事、战略发展与ESG委、新大陆（000997）【000997 新大陆】新大陆2025年度环境、社会和公司治、中国巨石（600176）【600176 中国巨石】中国巨石董事会战略与可持续发展（E等公司相继发布ESG委员会公告或制度文件，表明A股上市公司正从“被动披露”向“主动治理”转变，ESG委员会职能持续向投资决策渗透。同期，ESG报告与披露类新闻35条，绿地控股、新希望（000876）、怡合达（301029）等公司相继发布2025年度可持续发展报告，信披质量与国际化程度均有提升。</p>
           <p>碳市场与碳中和主题以16条新闻居政策类首位。生态环境部确认“十四五”期间碳排放强度持续下降，CCER方法学加速扩容，A股上市公司已开始抢滩碳资产布局。可持续金融与投资主题18条为数量最多方向，但“漂绿”问题引发市场关注，ESG基金业绩分化加剧，投资者需甄别产品实质性ESG含量。绿色能源与转型主题8条，可再生能源“十五五”规划落地，推动传统能源企业布局第二增长极。</p>
           <p>投资启示：第一，ESG治理架构完善的公司在信息披露评价中更易获得高评级，长期有望享受估值溢价；第二，CCER方法学扩容直接利好碳资产富集型公司；第三，可再生能源规划落地推动传统能源企业转型，第二增长极值得关注；第四，ESG基金“漂绿”风险提示投资者应穿透分析持仓的实质性ESG表现。本期被提及频次最高的公司为望变电气、秦安股份、隆平高科，建议结合基本面进一步研判其ESG事件的投资影响。</p>
         </div>
         <div class="investor-report-footer">
-          <span>报告日期：2026-09-17 | 数据来源：新浪财经ESG、巨潮可持续报告、巨潮ESG公告、每经ESG</span>
+          <span>报告日期：2026-10-06 | 数据来源：新浪财经ESG、巨潮可持续报告、巨潮ESG公告、每经ESG</span>
           <span>本简报仅供参考，不构成投资建议</span>
         </div>
       </div>
@@ -774,28 +790,28 @@
             <div class="theme-header" style="border-left-color:#e68fa8;">
               <span class="theme-icon">📋</span>
               <span class="theme-name">ESG报告与披露</span>
-              <span class="theme-count">33条</span>
+              <span class="theme-count">35条</span>
             </div>
             <div class="theme-desc">上市公司发布ESG/可持续发展报告</div>
             <ul class="theme-items">
               <li><a href="https://finance.sina.com.cn/stock/roll/2024-05-08/doc-inaunpfi8435868.shtml" target="_blank" rel="noopener">首次发布！一图速览绿地控股2023年度ESG报告</a></li>
               <li><a href="https://static.cninfo.com.cn/finalpage/2026-07-22/1225434549.PDF" target="_blank" rel="noopener">【000876 新希望】2025年可持续发展报告（英文版）</a></li>
               <li><a href="https://static.cninfo.com.cn/finalpage/2026-07-11/1225419832.PDF" target="_blank" rel="noopener">【301029 怡合达】东莞怡合达自动化股份有限公司2025年度可持续发展报告（英文版）</a></li>
-              <li class="more-items">还有 30 条 →</li>
+              <li class="more-items">还有 32 条 →</li>
             </ul>
           </div>
           <div class="theme-card">
             <div class="theme-header" style="border-left-color:#6a1b9a;">
               <span class="theme-icon">🏛️</span>
               <span class="theme-name">ESG治理与委员会</span>
-              <span class="theme-count">35条</span>
+              <span class="theme-count">40条</span>
             </div>
             <div class="theme-desc">ESG治理体系建设、委员会设立与制度建设</div>
             <ul class="theme-items">
               <li><a href="https://static.cninfo.com.cn/finalpage/2026-07-25/1225440379.PDF" target="_blank" rel="noopener">【300569 天能重工】关于拟补选董事、战略发展与ESG委员会委员的公告</a></li>
               <li><a href="https://static.cninfo.com.cn/finalpage/2026-07-22/1225435536.PDF" target="_blank" rel="noopener">【000997 新大陆】新大陆2025年度环境、社会和公司治理（ESG）报告（英文版）</a></li>
               <li><a href="https://static.cninfo.com.cn/finalpage/2026-07-16/1225426185.PDF" target="_blank" rel="noopener">【600176 中国巨石】中国巨石董事会战略与可持续发展（ESG）委员会关于巨石集团有限公司年产2.5亿米电子布生产线建...</a></li>
-              <li class="more-items">还有 32 条 →</li>
+              <li class="more-items">还有 37 条 →</li>
             </ul>
           </div>
           <div class="theme-card">
@@ -897,12 +913,12 @@
             <div class="theme-header" style="border-left-color:#78909c;">
               <span class="theme-icon">📌</span>
               <span class="theme-name">其他ESG动态</span>
-              <span class="theme-count">149条</span>
+              <span class="theme-count">180条</span>
             </div>
             <ul class="theme-items">
               <li><a href="http://finance.sina.com.cn/esg/index/gn0000006.shtml" target="_blank" rel="noopener">沪深ESG100优选指数</a></li>
               <li><a href="https://static.cninfo.com.cn/finalpage/2026-07-18/1225431093.PDF" target="_blank" rel="noopener">【688653 康希通信】康希通信环境、社会及治理（ESG）制度</a></li>
-              <li class="more-items">还有 147 条 →</li>
+              <li class="more-items">还有 178 条 →</li>
             </ul>
           </div>
         </div>
@@ -925,8 +941,8 @@
       </div>
 
       <div class="briefing-footer">
-        <span>本简报由 285 条ESG新闻自动聚合生成 | 来源：新浪财经ESG、巨潮可持续报告、巨潮ESG公告、每经ESG</span>
-        <span>生成时间：2026-09-17 15:37:41</span>
+        <span>本简报由 323 条ESG新闻自动聚合生成 | 来源：新浪财经ESG、巨潮可持续报告、巨潮ESG公告、每经ESG</span>
+        <span>生成时间：2026-10-06 13:55:55</span>
       </div>
     </div>
   </div>
